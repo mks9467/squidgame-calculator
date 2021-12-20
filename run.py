@@ -14,7 +14,7 @@ for i in range(0, games):
         if game.results[j] == True:
             counter += 1
     total = total + counter
-    if counter == 3:
+    if counter >= 3:
         threesTotal += 1
     counter = 0
 
@@ -22,4 +22,4 @@ average = total / games
 
 print('Total Games: ' + str(games))
 print('Average survived: ' + str(round(average, 5)))
-print('Percentage of games with 3 winners: ' + str(round(threesTotal/games * 100, 5)) + '%')
+print('Percentage of games with 3 or more winners: ' + str(round(threesTotal/games * 100, 5)) + '%')
